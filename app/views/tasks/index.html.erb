@@ -1,0 +1,10 @@
+<div class="max-w-3xl mx-auto">
+  <h2 class="text-center text-3xl p-3 font-bold">Index / My tasks</h2>
+  <div class="block justify-items">
+      <ul class="w-1/3 p-3">
+        <% @tasks.each do |task| %>
+          <li class="far fa-square"><%= link_to task.title, task_path(task) %></li>
+        <% end %>
+      </ul>
+  </div>
+</div>
