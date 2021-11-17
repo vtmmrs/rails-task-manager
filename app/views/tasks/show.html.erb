@@ -1,3 +1,15 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<a><%= @task.completed %></a>
+<div class="max-w-md mt-4 mx-auto px-4 pb-6 bg-yellow-200 rounded shadow-md">
+  <h2 class="text-center text-3xl p-3 font-bold">Selected task:</h2>
+  <%= link_to new_task_path, %>
+  <div class="blockjustify-center">
+    <h3 class="text-md font-bold "><%= @task.title %>: </h3>
+    <div class="flex">
+      <div class="pr-2"><% if @task.completed %>
+        <i class="fas fa-check-square"> </i>
+      <% else %>
+        <i class="far fa-square"> </i>
+      </div>
+      <div> <%= @task.details %></p></div>
+    </div>
+    <% end %>
+</div>
